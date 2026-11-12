@@ -1,16 +1,16 @@
 <div align="center">
-  <img src="./assets/images/logo.svg" alt="StreamCap" />
+  <img src="./assets/images/logo.svg" alt="SadSha StreamCap" />
 </div>
 <p align="center">
   <img alt="Python version" src="https://img.shields.io/badge/python-3.10%2B-blue.svg">
-  <a href="https://github.com/ihmily/StreamCap">
+  <a href="https://github.com/fnjlabs-arch/StreamCap">
       <img alt="Supported Platforms" src="https://img.shields.io/badge/Platforms-Win%20%7C%20Mac%20%7C%20Linux-6B5BFF.svg"></a>
-    <a href="https://hub.docker.com/r/ihmily/streamcap/tags">
-      <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/ihmily/streamcap?label=Docker%20Pulls&color=2496ED&logo=docker&v=0"></a>
-  <a href="https://github.com/ihmily/StreamCap/releases/latest">
-      <img alt="Latest Release" src="https://img.shields.io/github/v/release/ihmily/StreamCap"></a>
-  <a href="https://github.com/ihmily/StreamCap/releases/latest">
-      <img alt="Downloads" src="https://img.shields.io/github/downloads/ihmily/StreamCap/total?v=0"></a>
+    <a href="https://hub.docker.com/r/fnjlabs-arch/sadsha-streamcap/tags">
+      <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/fnjlabs-arch/sadsha-streamcap?label=Docker%20Pulls&color=2496ED&logo=docker&v=0"></a>
+  <a href="https://github.com/fnjlabs-arch/StreamCap/releases/latest">
+      <img alt="Latest Release" src="https://img.shields.io/github/v/release/fnjlabs-arch/StreamCap"></a>
+  <a href="https://github.com/fnjlabs-arch/StreamCap/releases/latest">
+      <img alt="Downloads" src="https://img.shields.io/github/downloads/fnjlabs-arch/StreamCap/total?v=0"></a>
 </p>
 <div align="center">
   简体中文 / <a href="./README_EN.md">English</a>
@@ -19,7 +19,7 @@
 
 
 
-StreamCap 是一个基于FFmpeg和StreamGet的多平台直播流录制客户端，覆盖 40+ 国内外主流直播平台，支持批量录制、循环监控、定时监控和自动转码等功能。
+SadSha StreamCap 是一个基于FFmpeg和StreamGet的多平台直播流录制客户端，覆盖 40+ 国内外主流直播平台，支持批量录制、循环监控、定时监控和自动转码等功能。
 
 ## ✨功能特性
 
@@ -32,16 +32,16 @@ StreamCap 是一个基于FFmpeg和StreamGet的多平台直播流录制客户端�
 
 ## 📸录制界面
 
-![StreamCap Interface](./assets/images/example01.png)
+![SadSha StreamCap Interface](./assets/images/example01.png)
 
 ## 🛠️快速开始
 
 ### 1.**运行预构建的程序**：
 
-访问 [StreamCap Releases](https://github.com/ihmily/StreamCap/releases/latest) 页面，根据自身系统下载对应的最新版本压缩包。
+访问 [SadSha StreamCap Releases](https://github.com/fnjlabs-arch/StreamCap/releases/latest) 页面，根据自身系统下载对应的最新版本压缩包。
 
-- **Windows 用户**：下载 `StreamCap.zip` 文件，解压后运行 `StreamCap.exe`。
-- **macOS 用户**：下载 `StreamCap.dmg` 文件，按照提示完成安装，即可在启动台找到应用并运行。
+- **Windows 用户**：下载 `SadSha StreamCap.zip` 文件，解压后运行 `SadSha StreamCap.exe`。
+- **macOS 用户**：下载 `SadSha StreamCap.dmg` 文件，按照提示完成安装，即可在启动台找到应用并运行。
 
 ### 2.从源代码运行
 
@@ -50,8 +50,8 @@ StreamCap 是一个基于FFmpeg和StreamGet的多平台直播流录制客户端�
 1.**克隆项目代码**：
 
 ```bash
-git clone https://github.com/ihmily/StreamCap.git
-cd StreamCap
+git clone https://github.com/fnjlabs-arch/StreamCap.git
+cd SadSha StreamCap
 ```
 
 2.**安装依赖**：
@@ -91,7 +91,7 @@ Linux请使用web方式运行，修改 `.env` 文件，将 `PLATFORM` 的值改�
 python main.py --web
 ```
 
-启动成功后，通过 `http://127.0.0.1:6006` 访问。更多配置请参考 [Web运行指南](https://github.com/ihmily/StreamCap/wiki/安装指南#web-端运行)
+启动成功后，通过 `http://127.0.0.1:6006` 访问。更多配置请参考 [Web运行指南](https://github.com/fnjlabs-arch/StreamCap/wiki/安装指南#web-端运行)
 
 如果程序提示缺少 FFmpeg，请访问 FFmpeg 官方下载页面[Download FFmpeg](https://ffmpeg.org/download.html)，下载预编译的 FFmpeg 可执行文件，并配置环境变量。
 
@@ -120,7 +120,7 @@ docker compose stop
 Docker仓库中的镜像的代码版本不一定是最新的，如有需要运行本仓库主分支最新代码，可以本地自定义构建
 
 ```bash
-docker build -t streamcap .
+docker build -t sadsha-streamcap .
 ```
 
 ## 😺已支持平台
@@ -301,17 +301,17 @@ https://xcqrkj.com/web/video.php?roomnumber=10394232
 
 ## 📖文档
 
-如需完整文档和高级用法，请访问官方文档 [Wiki](https://github.com/ihmily/StreamCap/wiki/%E4%B8%BB%E9%A1%B5)
+如需完整文档和高级用法，请访问官方文档 [Wiki](https://github.com/fnjlabs-arch/StreamCap/wiki/%E4%B8%BB%E9%A1%B5)
 
 ## ❤️贡献者
 
-<a href="https://github.com/ihmily/StreamCap/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ihmily/StreamCap" />
+<a href="https://github.com/fnjlabs-arch/StreamCap/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=fnjlabs-arch/StreamCap" />
 </a>
 
 ## 📜许可证
 
-StreamCap在Apache License 2.0下发布。有关详情，请参阅[LICENSE](./LICENSE)文件。
+SadSha StreamCap在Apache License 2.0下发布。有关详情，请参阅[LICENSE](./LICENSE)文件。
 
 ## 🙏特别感谢
 

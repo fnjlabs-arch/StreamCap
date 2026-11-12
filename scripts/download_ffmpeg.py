@@ -104,7 +104,7 @@ def install_platform(target_platform: str, url: str, refresh: bool, verify: bool
             print(f"Skipping verification for {target_platform} on this host.")
         return
 
-    with tempfile.TemporaryDirectory(prefix="streamcap-ffmpeg-") as temp_dir:
+    with tempfile.TemporaryDirectory(prefix="sadsha-streamcap-ffmpeg-") as temp_dir:
         archive_path = Path(temp_dir) / f"ffmpeg-{target_platform}.zip"
         download(url, archive_path)
         extract_ffmpeg(archive_path, output_path, target_platform)
@@ -117,7 +117,7 @@ def install_platform(target_platform: str, url: str, refresh: bool, verify: bool
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Download FFmpeg executables for StreamCap packaging.")
+    parser = argparse.ArgumentParser(description="Download FFmpeg executables for SadSha StreamCap packaging.")
     parser.add_argument(
         "--platform",
         choices=("macos", "windows", "all"),

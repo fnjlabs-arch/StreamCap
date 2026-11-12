@@ -1,6 +1,6 @@
-# StreamCap Packaging Guide
+# SadSha StreamCap Packaging Guide
 
-This document explains how to package the StreamCap desktop app with PyInstaller and how to prepare optional bundled FFmpeg / Node.js executables.
+This document explains how to package the SadSha StreamCap desktop app with PyInstaller and how to prepare optional bundled FFmpeg / Node.js executables.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ This document explains how to package the StreamCap desktop app with PyInstaller
   - Build macOS packages on macOS.
   - Build Windows packages on Windows.
 - PyInstaller does not support cross-compiling between macOS and Windows.
-- Install project dependencies first and make sure StreamCap can run in the current Python environment.
+- Install project dependencies first and make sure SadSha StreamCap can run in the current Python environment.
 
 ## One-Command Build
 
@@ -24,25 +24,25 @@ The script automatically:
 - Bundles `config`, `locales`, and `assets`.
 - Bundles `streamget` data files.
 - Bundles optional FFmpeg / Node.js executables when present.
-- On macOS, hides the outer PyInstaller Dock icon so only one StreamCap panda icon is shown.
+- On macOS, hides the outer PyInstaller Dock icon so only one SadSha StreamCap panda icon is shown.
 
 macOS output:
 
 ```text
-dist/StreamCap.app
+dist/SadSha StreamCap.app
 ```
 
 Run it with:
 
 ```bash
-open dist/StreamCap.app
+open dist/SadSha StreamCap.app
 ```
 
 Windows output:
 
 ```text
-dist/StreamCap/
-├─ StreamCap.exe
+dist/SadSha StreamCap/
+├─ SadSha StreamCap.exe
 └─ _internal/
    ├─ assets/
    ├─ config/
@@ -50,9 +50,9 @@ dist/StreamCap/
    └─ ...
 ```
 
-Windows uses the PyInstaller one-dir layout: `StreamCap.exe` stays at the top level as the user entry point, while runtime dependencies, resources, and DLLs live under `_internal`.
+Windows uses the PyInstaller one-dir layout: `SadSha StreamCap.exe` stays at the top level as the user entry point, while runtime dependencies, resources, and DLLs live under `_internal`.
 
-GitHub Actions automatically zips downloaded artifacts, so the workflow uploads the app directory under `dist` instead of creating an inner zip first. After downloading `StreamCap-windows.zip`, extracting it once gives a `StreamCap` folder.
+GitHub Actions automatically zips downloaded artifacts, so the workflow uploads the app directory under `dist` instead of creating an inner zip first. After downloading `SadSha StreamCap-windows.zip`, extracting it once gives a `SadSha StreamCap` folder.
 
 ## macOS Architecture
 
@@ -103,8 +103,8 @@ Runtime behavior:
 Destination:
 
 ```text
-macOS:   ~/Library/Application Support/StreamCap/ffmpeg/ffmpeg
-Windows: %APPDATA%\StreamCap\ffmpeg\ffmpeg.exe
+macOS:   ~/Library/Application Support/SadSha StreamCap/ffmpeg/ffmpeg
+Windows: %APPDATA%\SadSha StreamCap\ffmpeg\ffmpeg.exe
 ```
 
 ## Bundled Node.js
@@ -150,34 +150,34 @@ Runtime behavior:
 Destination:
 
 ```text
-macOS:   ~/Library/Application Support/StreamCap/node/node
-Windows: %APPDATA%\StreamCap\node\node.exe
+macOS:   ~/Library/Application Support/SadSha StreamCap/node/node
+Windows: %APPDATA%\SadSha StreamCap\node\node.exe
 ```
 
 ## macOS Flet Notes
 
-StreamCap uses Flet desktop mode. On macOS, Flet uses `Flet.app` as the actual window process.
+SadSha StreamCap uses Flet desktop mode. On macOS, Flet uses `Flet.app` as the actual window process.
 
 The packaged app applies the following handling:
 
-- The outer `StreamCap.app` runs as a background agent and does not show a Dock icon.
+- The outer `SadSha StreamCap.app` runs as a background agent and does not show a Dock icon.
 - The global Flet cache is not modified directly.
-- On first launch, StreamCap creates its own Flet app copy:
+- On first launch, SadSha StreamCap creates its own Flet app copy:
 
 ```text
-~/Library/Application Support/StreamCap/flet_client/<version>/StreamCap Flet.app
+~/Library/Application Support/SadSha StreamCap/flet_client/<version>/SadSha StreamCap Flet.app
 ```
 
-- The dedicated Flet copy uses the StreamCap panda icon.
+- The dedicated Flet copy uses the SadSha StreamCap panda icon.
 
 In normal use, the Dock should show only one panda icon.
 
 If macOS keeps showing an old icon after upgrading Flet or changing icons, delete the dedicated Flet cache and restart Dock:
 
 ```bash
-rm -rf "$HOME/Library/Application Support/StreamCap/flet_client"
+rm -rf "$HOME/Library/Application Support/SadSha StreamCap/flet_client"
 killall Dock
-open dist/StreamCap.app
+open dist/SadSha StreamCap.app
 ```
 
 ## User Data Directory
@@ -187,13 +187,13 @@ In packaged builds, mutable files such as config, logs, FFmpeg, and Node.js are 
 Locations:
 
 ```text
-macOS:   ~/Library/Application Support/StreamCap
-Windows: %APPDATA%\StreamCap
+macOS:   ~/Library/Application Support/SadSha StreamCap
+Windows: %APPDATA%\SadSha StreamCap
 ```
 
-On Windows, the default recording directory is `downloads` next to `StreamCap.exe`, so large videos are not written to the C drive user data directory by default. If the user chooses a save directory in Settings, that value takes precedence.
+On Windows, the default recording directory is `downloads` next to `SadSha StreamCap.exe`, so large videos are not written to the C drive user data directory by default. If the user chooses a save directory in Settings, that value takes precedence.
 
-When running from source, StreamCap still uses the project directory for easier development and debugging.
+When running from source, SadSha StreamCap still uses the project directory for easier development and debugging.
 
 ## Common Commands
 

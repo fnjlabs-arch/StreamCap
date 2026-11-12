@@ -3,7 +3,7 @@ import shutil
 import sys
 from pathlib import Path
 
-APP_NAME = "StreamCap"
+APP_NAME = "SadSha StreamCap"
 EXECUTABLE_SUFFIX = ".exe" if sys.platform == "win32" else ""
 
 

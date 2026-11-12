@@ -22,7 +22,7 @@
       "announcement": {
         "en": [
           {
-            "title": "StreamCap v1.0.3 is officially released",
+            "title": "SadSha StreamCap v1.0.3 is officially released",
             "content": "Fix some live streams cannot be recorded, adapt to updated UI version, and improve stability"
           },
           {
@@ -36,7 +36,7 @@
         ],
         "zh_CN": [
           {
-            "title": "StreamCap v1.0.3 正式发布",
+            "title": "SadSha StreamCap v1.0.3 正式发布",
             "content": "修复部分直播无法录制的问题，适配更新UI版本，提升稳定性"
           },
           {

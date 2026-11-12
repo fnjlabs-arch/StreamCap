@@ -107,7 +107,7 @@ class LeftNavigationMenu(ft.Column):
             content=ft.Row(
                 controls=[
                     ft.Image(src="images/logo-mark.svg", width=38, height=38, fit=ft.BoxFit.CONTAIN),
-                    ft.Text("StreamCap", size=18, weight=ft.FontWeight.BOLD),
+                    ft.Text("SadSha StreamCap", size=18, weight=ft.FontWeight.BOLD),
                 ],
                 spacing=10,
                 vertical_alignment=ft.CrossAxisAlignment.CENTER,

@@ -132,7 +132,7 @@ def handle_page_resize(page: ft.Page, app: App) -> Callable:
 
 
 async def main(page: ft.Page) -> None:
-    page.title = "StreamCap"
+    page.title = "SadSha StreamCap"
 
     _services = BackendServices.get()
     app = App(page, services=_services)

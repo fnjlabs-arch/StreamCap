@@ -1,6 +1,6 @@
-# StreamCap 打包说明
+# SadSha StreamCap 打包说明
 
-本文档说明如何使用 PyInstaller 打包 StreamCap 桌面应用，以及如何准备可选的内置 FFmpeg / Node.js。
+本文档说明如何使用 PyInstaller 打包 SadSha StreamCap 桌面应用，以及如何准备可选的内置 FFmpeg / Node.js。
 
 ## 环境要求
 
@@ -8,7 +8,7 @@
   - macOS 包必须在 macOS 上打。
   - Windows 包必须在 Windows 上打。
 - PyInstaller 不支持用 macOS 直接交叉打 Windows 包，反过来也一样。
-- 先安装项目依赖，确保当前 Python 环境可以正常运行 StreamCap。
+- 先安装项目依赖，确保当前 Python 环境可以正常运行 SadSha StreamCap。
 
 ## 一键打包
 
@@ -24,25 +24,25 @@ python scripts/build.py
 - 打包 `config`、`locales`、`assets`。
 - 打包 `streamget` 的数据文件。
 - 如果存在内置 FFmpeg / Node.js，则一起打包。
-- macOS 下隐藏外层 PyInstaller Dock 图标，只显示一个 StreamCap 熊猫图标。
+- macOS 下隐藏外层 PyInstaller Dock 图标，只显示一个 SadSha StreamCap 熊猫图标。
 
 macOS 打包完成后产物为：
 
 ```text
-dist/StreamCap.app
+dist/SadSha StreamCap.app
 ```
 
 运行：
 
 ```bash
-open dist/StreamCap.app
+open dist/SadSha StreamCap.app
 ```
 
 Windows 打包完成后产物为：
 
 ```text
-dist/StreamCap/
-├─ StreamCap.exe
+dist/SadSha StreamCap/
+├─ SadSha StreamCap.exe
 └─ _internal/
    ├─ assets/
    ├─ config/
@@ -50,9 +50,9 @@ dist/StreamCap/
    └─ ...
 ```
 
-Windows 使用 PyInstaller one-dir 结构：外层保留 `StreamCap.exe` 作为用户入口，运行依赖、资源文件和 DLL 放在 `_internal` 目录中。
+Windows 使用 PyInstaller one-dir 结构：外层保留 `SadSha StreamCap.exe` 作为用户入口，运行依赖、资源文件和 DLL 放在 `_internal` 目录中。
 
-GitHub Actions 会自动把上传的 artifact 打成 zip，因此工作流直接上传 `dist` 下的应用目录，不再预先生成内层 zip。下载 `StreamCap-windows.zip` 后解压一次即可得到 `StreamCap` 文件夹。
+GitHub Actions 会自动把上传的 artifact 打成 zip，因此工作流直接上传 `dist` 下的应用目录，不再预先生成内层 zip。下载 `SadSha StreamCap-windows.zip` 后解压一次即可得到 `SadSha StreamCap` 文件夹。
 
 ## macOS 架构
 
@@ -103,8 +103,8 @@ python scripts/build.py --no-bundle-ffmpeg
 目标位置：
 
 ```text
-macOS:   ~/Library/Application Support/StreamCap/ffmpeg/ffmpeg
-Windows: %APPDATA%\StreamCap\ffmpeg\ffmpeg.exe
+macOS:   ~/Library/Application Support/SadSha StreamCap/ffmpeg/ffmpeg
+Windows: %APPDATA%\SadSha StreamCap\ffmpeg\ffmpeg.exe
 ```
 
 ## 内置 Node.js
@@ -150,34 +150,34 @@ python scripts/build.py --no-bundle-node
 目标位置：
 
 ```text
-macOS:   ~/Library/Application Support/StreamCap/node/node
-Windows: %APPDATA%\StreamCap\node\node.exe
+macOS:   ~/Library/Application Support/SadSha StreamCap/node/node
+Windows: %APPDATA%\SadSha StreamCap\node\node.exe
 ```
 
 ## macOS Flet 说明
 
-StreamCap 使用 Flet 桌面模式。macOS 下 Flet 会使用 `Flet.app` 作为真正的窗口进程。
+SadSha StreamCap 使用 Flet 桌面模式。macOS 下 Flet 会使用 `Flet.app` 作为真正的窗口进程。
 
 本项目打包后做了以下处理：
 
-- 外层 `StreamCap.app` 作为后台 agent，不显示 Dock 图标。
+- 外层 `SadSha StreamCap.app` 作为后台 agent，不显示 Dock 图标。
 - Flet 官方缓存不会被直接修改。
-- 首次运行时会创建 StreamCap 专属 Flet 副本：
+- 首次运行时会创建 SadSha StreamCap 专属 Flet 副本：
 
 ```text
-~/Library/Application Support/StreamCap/flet_client/<版本>/StreamCap Flet.app
+~/Library/Application Support/SadSha StreamCap/flet_client/<版本>/SadSha StreamCap Flet.app
 ```
 
-- 专属 Flet 副本会替换为 StreamCap 熊猫图标。
+- 专属 Flet 副本会替换为 SadSha StreamCap 熊猫图标。
 
 因此正常情况下 Dock 只显示一个熊猫图标。
 
 如果升级 Flet 或图标后 macOS 仍显示旧图标，可以删除专属 Flet 缓存并重启 Dock：
 
 ```bash
-rm -rf "$HOME/Library/Application Support/StreamCap/flet_client"
+rm -rf "$HOME/Library/Application Support/SadSha StreamCap/flet_client"
 killall Dock
-open dist/StreamCap.app
+open dist/SadSha StreamCap.app
 ```
 
 ## 用户数据目录
@@ -187,11 +187,11 @@ open dist/StreamCap.app
 位置：
 
 ```text
-macOS:   ~/Library/Application Support/StreamCap
-Windows: %APPDATA%\StreamCap
+macOS:   ~/Library/Application Support/SadSha StreamCap
+Windows: %APPDATA%\SadSha StreamCap
 ```
 
-Windows 默认录制保存目录为 `StreamCap.exe` 同级目录下的 `downloads`，避免大文件写入 C 盘用户数据目录。用户在设置页手动选择保存目录后，以用户设置为准。
+Windows 默认录制保存目录为 `SadSha StreamCap.exe` 同级目录下的 `downloads`，避免大文件写入 C 盘用户数据目录。用户在设置页手动选择保存目录后，以用户设置为准。
 
 源码运行时仍使用项目目录，方便开发调试。
 

@@ -1,16 +1,16 @@
 <div align="center">
-  <img src="./assets/images/logo.svg" alt="StreamCap" />
+  <img src="./assets/images/logo.svg" alt="SadSha StreamCap" />
 </div>
 <p align="center">
   <img alt="Python version" src="https://img.shields.io/badge/python-3.10%2B-blue.svg">
-  <a href="https://github.com/ihmily/StreamCap">
+  <a href="https://github.com/fnjlabs-arch/StreamCap">
       <img alt="Supported Platforms" src="https://img.shields.io/badge/Platforms-Win%20%7C%20Mac%20%7C%20Linux-6B5BFF.svg"></a>
-    <a href="https://hub.docker.com/r/ihmily/streamcap/tags">
-      <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/ihmily/streamcap?label=Docker%20Pulls&color=2496ED&logo=docker&v=0"></a>
-  <a href="https://github.com/ihmily/StreamCap/releases/latest">
-      <img alt="Latest Release" src="https://img.shields.io/github/v/release/ihmily/StreamCap"></a>
-  <a href="https://github.com/ihmily/StreamCap/releases/latest">
-      <img alt="Downloads" src="https://img.shields.io/github/downloads/ihmily/StreamCap/total?v=0"></a>
+    <a href="https://hub.docker.com/r/fnjlabs-arch/sadsha-streamcap/tags">
+      <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/fnjlabs-arch/sadsha-streamcap?label=Docker%20Pulls&color=2496ED&logo=docker&v=0"></a>
+  <a href="https://github.com/fnjlabs-arch/StreamCap/releases/latest">
+      <img alt="Latest Release" src="https://img.shields.io/github/v/release/fnjlabs-arch/StreamCap"></a>
+  <a href="https://github.com/fnjlabs-arch/StreamCap/releases/latest">
+      <img alt="Downloads" src="https://img.shields.io/github/downloads/fnjlabs-arch/StreamCap/total?v=0"></a>
 </p>
 <div align="center">
   English / <a href="./README.md">Chinese</a>
@@ -18,7 +18,7 @@
 
 
 
-StreamCap is a multi-platform live stream recording client based on FFmpeg and StreamGet. It covers over 40 mainstream live streaming platforms both domestically and internationally, and supports features such as batch recording, loop monitoring, timed monitoring, and automatic transcoding.
+SadSha StreamCap is a multi-platform live stream recording client based on FFmpeg and StreamGet. It covers over 40 mainstream live streaming platforms both domestically and internationally, and supports features such as batch recording, loop monitoring, timed monitoring, and automatic transcoding.
 
 ## ✨Features
 
@@ -31,16 +31,16 @@ StreamCap is a multi-platform live stream recording client based on FFmpeg and S
 
 ## 📸Recording Interface
 
-![StreamCap Interface](./assets/images/example02.jpg)
+![SadSha StreamCap Interface](./assets/images/example02.jpg)
 
 ## 🛠️Quick Start
 
 ### 1. **Run the Pre-Built Program**
 
-Visit the [StreamCap Releases](https://github.com/ihmily/StreamCap/releases/latest) page and download the latest version according to your operating system:
+Visit the [SadSha StreamCap Releases](https://github.com/fnjlabs-arch/StreamCap/releases/latest) page and download the latest version according to your operating system:
 
-- **Windows Users**: Download the `StreamCap.zip` file, extract it, and run `StreamCap.exe`.
-- **macOS Users**: Download the `StreamCap.dmg` file and follow the on-screen instructions to install, then you can find the application in the Launchpad to run it.
+- **Windows Users**: Download the `SadSha StreamCap.zip` file, extract it, and run `SadSha StreamCap.exe`.
+- **macOS Users**: Download the `SadSha StreamCap.dmg` file and follow the on-screen instructions to install, then you can find the application in the Launchpad to run it.
 
 ### 2. Running from Source Code
 
@@ -49,8 +49,8 @@ Ensure you have **Python 3.10** or a higher version installed.💥
 1.**Clone the Project Code**:
 
 ```bash
-git clone https://github.com/ihmily/StreamCap.git
-cd StreamCap
+git clone https://github.com/fnjlabs-arch/StreamCap.git
+cd SadSha StreamCap
 ```
 
 2.**Install Dependencies**:
@@ -90,7 +90,7 @@ Alternatively, you can start it without modifying the configuration file by usin
 python main.py --web
 ```
 
-After successful startup, access it via `http://127.0.0.1:6006`.For more configuration details, refer to the [Web Operation Guide](https://github.com/ihmily/StreamCap/wiki/Installation-Guide#web-operation)
+After successful startup, access it via `http://127.0.0.1:6006`.For more configuration details, refer to the [Web Operation Guide](https://github.com/fnjlabs-arch/StreamCap/wiki/Installation-Guide#web-operation)
 
 If the program prompts that FFmpeg is missing, please visit the FFmpeg official download page [Download FFmpeg](https://ffmpeg.org/download.html) to download the precompiled FFmpeg executable files and configure the environment variables.
 
@@ -119,7 +119,7 @@ docker compose stop
 The code version in the Docker image repository may not always be the latest. If you need to run the latest code from the main branch of this repository, you can build it locally as a custom image.
 
 ```
-docker build -t streamcap .
+docker build -t sadsha-streamcap .
 ```
 
 ## 😺 Supported Platforms
@@ -297,17 +297,17 @@ https://xcqrkj.com/web/video.php?roomnumber=10394232
 
 ## 📖Documentation
 
-For full documentation and advanced usage, visit the [official documentation](https://github.com/ihmily/StreamCap/wiki).
+For full documentation and advanced usage, visit the [official documentation](https://github.com/fnjlabs-arch/StreamCap/wiki).
 
 ## ❤️Contributors
 
-<a href="https://github.com/ihmily/StreamCap/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ihmily/StreamCap" />
+<a href="https://github.com/fnjlabs-arch/StreamCap/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=fnjlabs-arch/StreamCap" />
 </a>
 
 ## 📜License
 
-StreamCap is released under the Apache License 2.0. For more details, see the [LICENSE](./LICENSE) file.
+SadSha StreamCap is released under the Apache License 2.0. For more details, see the [LICENSE](./LICENSE) file.
 
 ## 🙏Special Thanks
 

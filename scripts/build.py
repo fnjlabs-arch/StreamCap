@@ -10,7 +10,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-APP_NAME = "StreamCap"
+APP_NAME = "SadSha StreamCap"
 ROOT = Path(__file__).resolve().parents[1]
 FLET_ARCHIVE_DIR = ROOT / "build" / "flet_desktop_app"
 VENDOR_DIR = ROOT / "vendor"
@@ -138,7 +138,7 @@ def pyinstaller_command(args: argparse.Namespace, target_platform: str) -> list[
                 "--hidden-import",
                 "plyer.platforms.macosx.notification",
                 "--osx-bundle-identifier",
-                "io.github.ihmily.streamcap",
+                "io.github.fnjlabs-arch.sadsha-streamcap",
             ]
         )
         if args.target_arch:
@@ -198,7 +198,7 @@ def hide_launcher_dock_icon(app_path: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Build StreamCap desktop packages with PyInstaller.")
+    parser = argparse.ArgumentParser(description="Build SadSha StreamCap desktop packages with PyInstaller.")
     parser.add_argument("--platform", choices=("macos", "windows"), help="Target platform. Defaults to the host OS.")
     parser.add_argument("--target-arch", choices=("arm64", "x86_64", "universal2"), help="macOS target architecture.")
     parser.add_argument("--refresh-flet", action="store_true", help="Re-download the Flet desktop archive.")

@@ -1,11 +1,11 @@
 [project]
-name = "StreamCap"
+name = "sadsha-streamcap"
 version = "1.0.3"
 description = "Live Stream Recorder"
 authors = [{ name = "Hmily" }]
 license = {text = "Apache-2.0"}
 readme = "README.md"
-url='https://github.com/ihmily/StreamCap'
+url='https://github.com/fnjlabs-arch/StreamCap'
 requires-python = ">=3.10,<4.0"
 
 dependencies = [
@@ -23,18 +23,18 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/ihmily/StreamCap/wiki"
-Homepage = "https://github.com/ihmily/StreamCap"
-Source = "https://github.com/ihmily/StreamCap"
+Documentation = "https://github.com/fnjlabs-arch/StreamCap/wiki"
+Homepage = "https://github.com/fnjlabs-arch/StreamCap"
+Source = "https://github.com/fnjlabs-arch/StreamCap"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.flet]
-org = "io.github.ihmily.streamcap"
-product = "StreamCap"
-company = "io.github.ihmily.streamcap"
+org = "io.github.fnjlabs-arch.sadsha-streamcap"
+product = "SadSha StreamCap"
+company = "io.github.fnjlabs-arch.sadsha-streamcap"
 copyright = "Copyright (C) 2025 by Hmily"
 compile.app = false
 compile.packages = false

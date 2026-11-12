@@ -371,12 +371,12 @@ class AboutPage(PageBase):
 
     @staticmethod
     async def open_update_page(e):
-        url = "https://github.com/ihmily/StreamCap/releases"
+        url = "https://github.com/fnjlabs-arch/StreamCap/releases"
         await e.page.launch_url(url)
 
     @staticmethod
     async def open_dos_page(e):
-        url = "https://github.com/ihmily/StreamCap/wiki"
+        url = "https://github.com/fnjlabs-arch/StreamCap/wiki"
         await e.page.launch_url(url)
 
     async def on_keyboard(self, e: ft.KeyboardEvent):

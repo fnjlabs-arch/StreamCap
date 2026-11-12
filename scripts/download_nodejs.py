@@ -158,7 +158,7 @@ def install_platform(target_platform: str, version: str, arch: str, refresh: boo
     name = archive_name(version, target_platform, arch)
     url = f"{NODE_DIST_BASE}/{version}/{name}"
 
-    with tempfile.TemporaryDirectory(prefix="streamcap-node-") as temp_dir:
+    with tempfile.TemporaryDirectory(prefix="sadsha-streamcap-node-") as temp_dir:
         archive_path = Path(temp_dir) / name
         download(url, archive_path)
         extract_node(archive_path, output_path, target_platform)
@@ -171,7 +171,7 @@ def install_platform(target_platform: str, version: str, arch: str, refresh: boo
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Download Node.js executables for StreamCap packaging.")
+    parser = argparse.ArgumentParser(description="Download Node.js executables for SadSha StreamCap packaging.")
     parser.add_argument(
         "--platform",
         choices=("macos", "windows", "all"),

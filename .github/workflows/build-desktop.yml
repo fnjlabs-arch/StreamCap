@@ -63,7 +63,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: StreamCap-windows
+          name: SadSha StreamCap-windows
           path: dist/*
           if-no-files-found: error
 
@@ -107,11 +107,11 @@ jobs:
         run: |
           python -c "from pathlib import Path; path = Path('scripts/create_macos_dmg.sh'); path.write_bytes(path.read_bytes().replace(b'\r\n', b'\n'))"
           bash -n scripts/create_macos_dmg.sh
-          bash scripts/create_macos_dmg.sh "dist/StreamCap.app" "dist/StreamCap-macos.dmg"
+          bash scripts/create_macos_dmg.sh "dist/SadSha StreamCap.app" "dist/SadSha StreamCap-macos.dmg"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: StreamCap-macos
-          path: dist/StreamCap-macos.dmg
+          name: SadSha StreamCap-macos
+          path: dist/SadSha StreamCap-macos.dmg
           if-no-files-found: error

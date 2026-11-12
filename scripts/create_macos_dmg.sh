@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-APP_PATH="${1:-dist/StreamCap.app}"
-DMG_PATH="${2:-dist/StreamCap-macos.dmg}"
-VOLUME_NAME="${3:-StreamCap}"
+APP_PATH="${1:-dist/SadSha StreamCap.app}"
+DMG_PATH="${2:-dist/SadSha StreamCap-macos.dmg}"
+VOLUME_NAME="${3:-SadSha StreamCap}"
 BACKGROUND_IMAGE="${4:-assets/images/dmg.jpg}"
 WINDOW_WIDTH=830
 WINDOW_HEIGHT=540
@@ -90,7 +90,7 @@ tell application "Finder"
     set arrangement of viewOptions to not arranged
     set icon size of viewOptions to $ICON_SIZE
     set background picture of viewOptions to backgroundImage
-    set position of item "StreamCap.app" of container window to {$APP_ICON_X, $APP_ICON_Y}
+    set position of item "SadSha StreamCap.app" of container window to {$APP_ICON_X, $APP_ICON_Y}
     set position of item "Applications" of container window to {$APPLICATIONS_ICON_X, $APPLICATIONS_ICON_Y}
     update without registering applications
     delay 3

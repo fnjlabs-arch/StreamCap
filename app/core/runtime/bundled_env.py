@@ -61,7 +61,7 @@ def patch_macos_flet_launcher() -> None:
         return False
 
     def write_file_picker_entitlements(target_dir: Path) -> Path:
-        entitlements_path = target_dir / "StreamCapFlet.entitlements"
+        entitlements_path = target_dir / "SadSha StreamCapFlet.entitlements"
         entitlements = {
             "com.apple.security.files.user-selected.read-write": True,
         }
@@ -69,8 +69,8 @@ def patch_macos_flet_launcher() -> None:
             plistlib.dump(entitlements, file)
         return entitlements_path
 
-    def prepare_streamcap_flet_app() -> Path:
-        target_app_name = "StreamCap Flet.app"
+    def prepare_sadsha_streamcap_flet_app() -> Path:
+        target_app_name = "SadSha StreamCap Flet.app"
         target_app = Path(user_data_dir) / "flet_client" / flet_desktop.version.version / target_app_name
         source_app = find_cached_flet_app(target_app)
         target_icon = target_app / "Contents" / "Resources" / "AppIcon.icns"
@@ -89,9 +89,9 @@ def patch_macos_flet_launcher() -> None:
         info_plist = target_app / "Contents" / "Info.plist"
         with info_plist.open("rb") as file:
             info = plistlib.load(file)
-        info["CFBundleName"] = "StreamCap"
-        info["CFBundleDisplayName"] = "StreamCap"
-        info["CFBundleIdentifier"] = "io.github.ihmily.streamcap.flet"
+        info["CFBundleName"] = "SadSha StreamCap"
+        info["CFBundleDisplayName"] = "SadSha StreamCap"
+        info["CFBundleIdentifier"] = "io.github.fnjlabs-arch.sadsha-streamcap.flet"
         info["CFBundleIconFile"] = "AppIcon"
         info.pop("CFBundleIconName", None)
         with info_plist.open("wb") as file:
@@ -118,7 +118,7 @@ def patch_macos_flet_launcher() -> None:
 
     def build_launch_args(page_url, assets_dir, hidden):
         pid_file = str(Path(tempfile.gettempdir()).joinpath(random_string(20)))
-        app_path = prepare_streamcap_flet_app()
+        app_path = prepare_sadsha_streamcap_flet_app()
         info_plist = app_path / "Contents" / "Info.plist"
         with info_plist.open("rb") as file:
             info = plistlib.load(file)

@@ -19,13 +19,13 @@ VSVersionInfo(
                 StringTable(
                     '040904b0',
                     [
-                        StringStruct('CompanyName', 'io.github.ihmily.streamcap'),
+                        StringStruct('CompanyName', 'io.github.fnjlabs-arch.sadsha-streamcap'),
                         StringStruct('FileDescription', 'Live Stream Recorder'),
                         StringStruct('FileVersion', '1.0.3'),
-                        StringStruct('InternalName', 'StreamCap'),
+                        StringStruct('InternalName', 'SadSha StreamCap'),
                         StringStruct('LegalCopyright', 'Copyright (C) 2025-2026 by Hmily. All rights reserved.'),
-                        StringStruct('OriginalFilename', 'StreamCap.exe'),
-                        StringStruct('ProductName', 'StreamCap'),
+                        StringStruct('OriginalFilename', 'SadSha StreamCap.exe'),
+                        StringStruct('ProductName', 'SadSha StreamCap'),
                         StringStruct('ProductVersion', '1.0.3'),
                     ]
                 )
